@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* color: #253b51; */
+  /* color: white; */
+  /* color: ivory; */
+}
+@font-face {
+  font-family: kbsolid;
+  src: url(./assets/KGBlankSpaceSolid.ttf);
+}
+/* body{
+  background: black;
+  background: linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+} */
+#app {
+  /* background: black; */
+  width: 100vw;
+  height: 100vh;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dark{
+  color: #D0D5FA;
+  background: linear-gradient(90deg, hsla(208, 33%, 11%, 1) 0%, hsla(211, 36%, 36%, 1) 100%)
+}
+.light{
+  color: #243c53;
+  background: linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+}
+.focus{
+  color: #D0D5FA;
+  background: black;
+}
+#theme-btn {
+  box-shadow: 0px 0px 10px grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.5vmin;
+  /* position: absolute; */
+  /* top: 5vh;
+  right: 3vw; */
+  background: transparent;
+  transition: all 0.4s;
+}
+#theme-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+#theme-btn:active {
+  transform: scale(0.8) rotate(300deg);
+}
+#clock-time {
+  /* justify-self: center; */
+  /* padding-top: 4vmin; */
+  font-family: kbsolid;
+  text-align: center;
+  /* max-width: 80vw; */
+  display: flex;
+}
+.time {
+  font-size: 12vw;
+}
+.time-head{
+  font-size: 2vw;
+}
+#clock-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-size: 5vmin; */
+  width: 24vw;
+}
+#navbar {
+  position: absolute;
+  opacity: 0.4;
+  top: 0;
+  width: 100vw;
+  padding: 1.4vmin;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  /* flex-direction: row; */
+  /* justify-content: flex-end; */
+  /* align-items: center; */
+  gap: 5vmin;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(4px);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.4s;
+}
+#navbar:hover{
+  /* background: rgba(255, 255, 255, 0.4); */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  opacity: 1;
+}
+#navbar-right{
+  display: flex;
+  gap: 5vmin;
+  justify-self: flex-end;
+  align-items: center;
+}
+.nav-opt {
+  text-decoration: none;
+  /* color: black; */
+  font-family: kbsolid;
+  /* border: 2px solid black; */
+  padding: 0.5vmin;
+  border-radius: 30px;
+  transition: all 0.2s;
+  font-size: 1vmax;
+}
+.nav-opt:hover {
+  transform: scale(1.1);
+}
+#stopwatch-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vmin;
+}
+#buttons {
+  display: flex;
+  gap: 4vmin;
+}
+#buttons button {
+  padding: 0.7vmin;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #243c53;
+  color: ivory;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-size: 2.5vmin;
+}
+#buttons button:hover{
+  transform: scale(1.1);
+  box-shadow: 0 2px 25px 0 rgba(31, 38, 135, 0.37);
+}
+@media (max-width: 700px) { 
+  .time {
+    font-size: 5vmax;
+  }
+}
+#name {
+  font-size: 1.7vmin;
+  font-family: kbsolid;
+  position: absolute;
+  bottom: 2vmin;
+  right: 2vmin;
+}
+#focus-btn{
+  position: absolute;
+  bottom: 2vmin;
+  left: 2vmin;
+}
+#focus-btn button{
+  padding: 1vmin;
+  background: transparent;
+  border-radius: 30%;
+  border: 1px solid;
+  font-family: kbsolid;
+  font-size: 2vmin;
+  cursor: pointer;
+}
+.time-head {
+  animation: bhuk-bhuk 1s linear infinite;
+  /* display: none; */
+}
+@keyframes bhuk-bhuk {
+  100% {
+    opacity: 0;
+  }
+}
+#new-year-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vmin;
+}
+#head {
+  font-size: 5vmax;
+  font-family: kbsolid;
+}
+#year {
+  font-size: 5vmax;
+  font-family: kbsolid;
+  transition: all 0.5s;
+  position: relative;
+}
+.year-num {
+  font-size: 10vmax;
+}
+.bg{
+  position: absolute;
+  animation: bg 3s linear infinite alternate;
+}
+@keyframes bg {
+  100%{
+    transform: translateY(-2vh);
+    opacity: 0;
+  }
+}
