@@ -173,14 +173,14 @@
   cursor: pointer;
 }
 .time-head {
-  animation: bhuk-bhuk 1s linear infinite;
+  /* animation: bhuk-bhuk 1s linear infinite; */
   /* display: none; */
 }
-@keyframes bhuk-bhuk {
+/* @keyframes bhuk-bhuk {
   100% {
     opacity: 0;
   }
-}
+} */
 #new-year-div {
   display: flex;
   flex-direction: column;
